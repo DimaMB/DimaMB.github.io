@@ -271,6 +271,7 @@ body{
 	border-right: 3px solid #faad14;
 }
 .button{
+	border: none;
 	background-color: #faad14;
 	border-radius: 4px; 
 	text-decoration: none;
@@ -280,6 +281,7 @@ body{
     font-size: 16px;
 	line-height: 24px;
 	padding: 13px;
+	cursor: pointer;
 }
 .button-new-post{
 	display: block;
@@ -356,15 +358,51 @@ body{
 	line-height: 20px;
 	color: #fff;
 }
+.button-outline{
+	background-color: #fff;
+	border: 1px solid #ffc53d;
+	border-radius: 4px; 
+	color: #ffc53d;
+	outline: 16px;
+	padding-right: 16px;
+	cursor: pointer;
+}
+.button-outline .icon{
+	width: 14px;
+	height: 11px;
+	fill: #ffc53d;
+}
+.add-post{
+	display: flex;
+	flex-direction: column;
+}
+
+.add-title, .add-text{
+	background: #FFFFFF;
+	border: 1px solid #E8E8E8;
+	padding: 23px 30px;
+	margin-bottom: 16px;
+}
+.add-text{
+	min-height: 362px;
+}
+.add-button{
+	width: 100%;
+	max-width: 370px;
+	margin-right: 2%;
+}
+.add-post .button-outline{
+	margin-right: 1%;
+}
 @media (max-width: 990px) {
 	.sidebar{
 		position: fixed;
 		top: 64px;
 		right: 0;
 		bottom: 0;
-		height: calc(100% - 118px);
+		height: calc(100% - 64px);
 		max-width: 320px;
-		width: 100%;	
+		width: 100%;
 		background-color: #fff;
 		padding: 30px;
 		box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
@@ -405,11 +443,7 @@ body{
 		background-color: #fff;
 	}
 	.header-nav{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-left: 35px;
-		padding-right: 35px;
+		display: none;
 	}
 }
 @media (max-width: 770px){
@@ -429,8 +463,24 @@ body{
 		width: 90%;
 		margin: auto;
 	}
+	
+}
+@media (max-width: 676px){
+	.add-button{
+		width: 100%;
+		max-width: 100%;
+	}
+	.add-buttons{
+		flex-direction: column;
+		display: flex;
+	}
+	.add-post .button-outline{
+		margin-right: 0;
+		margin-top: 10px;
+	}
 }
 @media (max-width: 495px){
+
 	.post-footer{
 		flex-direction: column;
 	}
